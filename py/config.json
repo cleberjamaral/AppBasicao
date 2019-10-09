@@ -1,5 +1,5 @@
 {
-    "dburi": "mongodb+srv://Amaral:<password>@cleberjamaral-nwipg.gcp.mongodb.net/test?retryWrites=true&w=majority",
+    "dburi": "mongodb+srv://Amaral:R8P!S#vS9d9Fd43@cleberjamaral-nwipg.gcp.mongodb.net/test?retryWrites=true&w=majority",
     "fbclientId": "XXXXXXXXXX",
-    "fbclientSecret": "XXXXXXXXXXXX"   
+    "fbclientSecret": "XXXXXXXXXXXX"
 }

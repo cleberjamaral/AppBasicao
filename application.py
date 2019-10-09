@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
-from flask_cors import CORS
-from py.formCadastro import *
-from py.authentication import *
+from py.formCadastro import listCadastro, saveCadastro
+from py.authentication import verifyFbToken, verifyGlToken, saveUser
 
 
 application = Flask(__name__)
@@ -27,8 +26,6 @@ def listForm():
 def saveForm():
     authenticate()
     return saveCadastro(request)
-
-
 
 def authenticate():
     login = request.args.get("login")

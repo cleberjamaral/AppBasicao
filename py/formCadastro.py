@@ -1,5 +1,5 @@
 import pymongo
-from py.dbconnect import *
+from py.dbconnect import dbConnection, saveData
 from bson.json_util import dumps
 from urllib.parse import unquote
 import datetime
