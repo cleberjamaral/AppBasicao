@@ -11,8 +11,7 @@ def dbConnection(dbcollectionname):
     dburi = getConfig('dburi')
     dbname = "test"
     client = pymongo.MongoClient(dburi)
-    #db = client[dbname]
-    db = client.test
+    db = client[dbname]
     dbcollection = db[dbcollectionname]
     return dbcollection
 

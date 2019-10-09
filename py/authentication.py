@@ -1,8 +1,7 @@
 import requests
 import pymongo
-from py.dbconnect import *
+from py.dbconnect import getConfig, dbConnection
 import datetime
-
 
 def verifyFbToken(fbtoken, fbuserid):
     clientId = getConfig('fbclientId')
