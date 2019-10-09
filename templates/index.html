@@ -4,7 +4,7 @@
 	<meta http-equiv="Access-Control-Allow-Origin" content="*">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-	<meta name="google-signin-client_id" content="XXXXXXXXXXXXXXX.apps.googleusercontent.com">
+	<meta name="google-signin-client_id" content="624691649322-bp5dvpqihdsjv9quo4baeor9t8dili34.apps.googleusercontent.com">
 	<title>:: APP BASICÃO ::</title>
 
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
@@ -24,6 +24,7 @@
 		@import url("../static/css/main.css");
 	</style>
     <!-- Mongo User:Amaral Password:R8P!S#vS9d9Fd43-->
+    <!-- Google clientid:624691649322-bp5dvpqihdsjv9quo4baeor9t8dili34.apps.googleusercontent.com secret:aodmLIXGjn754jvrPw4asynT-->
 </head>
 
 
@@ -60,7 +61,14 @@
 					scope="public_profile,email" onlogin="checkLoginState();"></div>
 
 				<br/><br/>
+<fb:login-button
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
+				<br/><br/>
 				<div id="google-signin2"></div>
+				<br/><br/>
+                Teste
 			</center>
 		</section>
 
