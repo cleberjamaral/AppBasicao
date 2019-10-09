@@ -3,14 +3,14 @@ function saveForm() {
 	var message = document.getElementById("feedbackmessageTextArea").value;
 	var contact = document.getElementById("contactField").value;
 
-	var url = "/saveForm?" 
+	var url = "/saveForm?"
 				+ "contact=" + encodeURIComponent(contact)
 				+ "&message=" + encodeURIComponent(message)
-				+ "&login=" + login 
-				+ "&userid=" + userid 
-				+ "&latitude=" + latitude
-        		+ "&longitude=" + longitude	
-				+ "&token=" + token;
+				+ "&login=1" + login
+				+ "&userid=1" + userid
+				+ "&latitude=1" + latitude
+        		+ "&longitude=1" + longitude
+				+ "&token=1" + token;
 
 	fetch(url, {method: 'POST'})
 		.then(function(response) {
@@ -22,10 +22,10 @@ function saveForm() {
 
 function listForm() {
 	var url = "/listForm?"
-				+ "login=" + login 
-				+ "&userid=" + userid 
+				+ "login=" + login
+				+ "&userid=" + userid
 				+ "&token=" + token;
-	fetch(url, {method: 'POST'}) 
+	fetch(url, {method: 'POST'})
 		.then((resp) => resp.json())
 		.then(function(respjson) {
 			var list = "";
@@ -35,9 +35,9 @@ function listForm() {
 				if (item.timestamp != undefined && (item.timestamp != "")) {
 					var date = new Date(item.timestamp.$date);
 				}
-				   list += "<hr>" + 
+				   list += "<hr>" +
 						   date + "<br/>" +
-						   item.contact + "<br/>" + 
+						   item.contact + "<br/>" +
 						   item.message;
 				   addMarker(parseInt(item.latitude), parseInt(item.longitude), item.message);
 			}
